@@ -19,3 +19,33 @@
 ( ) Within 1 month
 ( ) Within 3 months
 ( ) Just exploring options
+
+SFDC Logic:
+
+IF Siding is selected THEN
+    Primary = Siding
+
+ELSE IF Deck is selected AND Siding is NOT selected THEN
+    Primary = Deck
+
+ELSE IF Structures is selected
+        AND Siding is NOT selected
+        AND Deck is NOT selected THEN
+    Primary = Structures
+
+ELSE IF Furniture is selected
+        AND Siding is NOT selected
+        AND Deck is NOT selected
+        AND Structures is NOT selected
+        AND Pressure is NOT selected THEN
+    Primary = Furniture   // only Furniture
+
+ELSE IF Pressure is selected
+        AND Siding is NOT selected
+        AND Deck is NOT selected
+        AND Structures is NOT selected
+        AND Furniture is NOT selected THEN
+    Primary = Pressure    // only Pressure
+
+// Otherwise: Primary is intentionally left unset for estimator/system to interpret.
+// (but we never have "no surfaces selected" because the form forces ≥ 1 choice)
