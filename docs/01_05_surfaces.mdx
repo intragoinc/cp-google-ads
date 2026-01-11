@@ -1,0 +1,149 @@
+# Part 1.5 — Surface Model
+
+---
+
+## 1. Overview
+
+Cal Preserving works across a wide range of exterior wood surfaces. Buyers do not always articulate surface type accurately in search queries, so the initiative uses a normalized internal model.
+
+The surface model impacts:
+
+- Campaign grouping
+- Landing pages
+- Keyword intent
+- Salesforce attribution
+- Phase sequencing
+
+---
+
+## 2. Surface Categories (Normalized)
+
+The normalized surface taxonomy uses **five** top-level categories:
+
+1. **Deck**
+2. **Siding**
+3. **Structures**
+4. **Pressure (Hardscape)**
+5. **Catch-All (Exterior Wood)**
+
+This taxonomy maps efficiently to search behavior and ad groups.
+
+---
+
+## 3. Subsurface Breakdown (Informational)
+
+| Category | Included Surfaces |
+|---|---|
+| **Deck** | Decking, railings, stairs, balconies |
+| **Siding** | Wood siding, cladding, facades |
+| **Structures** | Fences, gates, trellis, арbors, pergolas, gazebos, patio furniture |
+| **Pressure (Hardscape)** | Concrete, stone, patio hardscape pressure washing |
+| **Catch-All** | Mixed-use “exterior wood” queries |
+
+The **Structures** category intentionally combines fencing + furniture + exterior architectural wood to reduce early fragmentation.
+
+---
+
+## 4. Preservative vs Hardscape Note
+
+Important operational distinction:
+
+- **Pressure washing (wood)** is included inside Deck / Siding / Structures prep.
+- **Pressure washing (hardscape only)** is broken out as **Pressure (Hardscape)** because:
+  - It is frequently purchased as a standalone commercial/HOA job.
+  - It supports “lead magnet” use cases.
+  - It affects minimum job pricing differently.
+
+---
+
+## 5. Landing Page Alignment
+
+Each surface maps to its own landing page:
+
+| Surface | LP Exists in Phase |
+|---|---|
+| **Deck** | Phase 1 |
+| **Siding** | Phase 1 |
+| **Structures** | Phase 1 |
+| **Pressure** | Phase 1 |
+| **Catch-All** | Phase 1 |
+
+LPs are not duplicated by geo in early phases. Phase 3 introduces persona duplication:
+
+| Persona Split Phase | Residential LP | Commercial LP |
+|---|---|---|
+| **Phase 3** | Yes | Yes |
+
+---
+
+## 6. Form Behavior
+
+Form collects normalized surface selection as:
+
+> **Multi-select field (M1):**  
+> “Deck;Fence;Hardscape;Furniture;Siding”
+
+Primary surface value is resolved using:
+
+IF Siding selected THEN PRIMARY = Siding
+ELSE IF Deck selected THEN PRIMARY = Deck
+ELSE IF Structures selected THEN PRIMARY = Structures
+ELSE IF Furniture only THEN PRIMARY = Furniture
+ELSE IF Pressure only THEN PRIMARY = Pressure
+
+This avoids catch-all logic.
+
+---
+
+## 7. Search Intent Alignment
+
+Search intent aligns cleanly:
+
+| Surface | Example Query Patterns |
+|---|---|
+| Deck | “deck refinishing”, “deck restoration”, “ipe deck staining” |
+| Siding | “cedar siding restoration”, “wood siding refinishing” |
+| Structures | “wood fence restoration”, “patio furniture refinishing” |
+| Pressure | “concrete pressure washing”, “hardscape cleaning” |
+| Catch-All | “exterior wood repair”, “wood restoration company” |
+
+---
+
+## 8. Commercial Considerations
+
+Commercial / HOA / PM buyers search less by surface and more by:
+
+- Property type (apartment, HOA, condo complex)
+- Stakeholder role (facility manager, PM, board)
+- Project scale (“multi building”)
+
+Surface terms still matter but appear later in queries or RFQ.
+
+Phase 3 introduces persona split for this.
+
+---
+
+## 9. Operational Mapping to Salesforce
+
+Salesforce attributes use **normalized surface** to support downstream reporting:
+
+- Close rate by surface
+- Job size by surface
+- Margin by surface
+- Seasonal impact by surface
+
+This enables economics-driven budget allocation.
+
+---
+
+## 10. Summary
+
+Surface taxonomy is foundational to:
+
+- Campaign architecture
+- Landing experiences
+- Form capture
+- Salesforce reporting
+- Persona expansion (Phase 3)
+
+It allows Cal Preserving to sell the right work, not just any work.
