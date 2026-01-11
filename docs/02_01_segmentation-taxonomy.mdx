@@ -1,0 +1,52 @@
+# Part 2.1 — Segmentation & Taxonomy Model
+
+---
+
+## 1. Purpose
+
+This document defines the **canonical segmentation and taxonomy model** for the Cal Preserving Google Ads system.
+
+It is the **source of truth** for:
+
+- Campaign design  
+- CSV masters (Phase 1–3)  
+- Landing page mapping  
+- CTA rules  
+- Persona behavior  
+- Geo behavior  
+- Reporting keys  
+
+Routing, Salesforce configuration, and phone-based attribution are **out of scope** here.
+
+---
+
+## 2. Core Dimensions
+
+The system is built on six core segmentation dimensions:
+
+1. **Phase** — rollout stage of the system  
+2. **Geo** — bay_area vs fringe  
+3. **Persona** — residential vs commercial (Phase 3 only)  
+4. **Surface** — deck, siding, structures, pressure, catch_all  
+5. **Campaign Concept** — combination of geo + surface (+ persona in Phase 3)  
+6. **Keyword Intent** — repair / restoration / maintenance / finishing / species / pressure / generic / catch_all
+
+These dimensions must remain stable across:
+
+- Google Ads campaigns and ad groups  
+- CSV master files  
+- Landing page structure  
+- Reporting and dashboards  
+
+---
+
+## 3. Canonical Enums
+
+### 3.1 Phase
+
+Internal phase identifiers:
+
+```txt
+phase_1   // Bay Area only, Residential (implicit)
+phase_2   // Bay Area + Fringe, Residential (implicit)
+phase_3   // Bay Area + Fringe, Residential + Commercial (explicit personas)
