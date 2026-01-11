@@ -2,13 +2,13 @@
 
 ## Files Included
 
-- `rsa_inventory.csv`
-- `campaign_export.csv`
-- `editor_import.csv`
-- `creative_documentation.md`
-- `taxonomy_overview.md`
-- `pruning_guide.md`
-- `handoff_readme.md` (this file)
+- `02_01_campaign_export.csv`
+- `02_02_editor_import.csv`
+- `03_03_rsa_inventory.csv`
+- `02_04_rsa-component-library.md`
+- `02_05_handoff_readme.md` (this file)
+- `02_06_pruning_guide.md`
+- `02_07_creative_documentation.md`
 
 ## High-Level Flow
 
