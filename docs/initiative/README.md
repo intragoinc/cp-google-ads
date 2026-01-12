@@ -18,7 +18,7 @@
 ## 02. Segmentation, Canonical, Creative System
 
 - [02_01_segmentation-taxonomy.mdx](./02_01_segmentation-taxonomy.mdx)
-- [02_02_full_canonical.mdx](./02_02_full_canonical.mdx)
+- [02_02_full-canonical.mdx](./02_02_full-canonical.mdx)
 - [02_04_rsa-component-library.md](./02_04_rsa-component-library.md)
 - [02_05_handoff-readme.md](./02_05_handoff-readme.md)
 - [02_06_pruning-guide.md](./02_06_pruning-guide.md)
@@ -27,8 +27,6 @@
 ---
 
 ## 02A. Landing Pages (Current LP Content Docs)
-
-> These appear to be the newer LP docs that replace/augment earlier “lp-spec-*” patterns.
 
 ### Deck
 - [02_08_lp-deck-residential.md](./02_08_lp-deck-residential.md)
@@ -90,7 +88,7 @@
 - [campaign-master-phase-1.csv](./campaign-master-phase-1.csv)
 - [campaign-master-phase-2.csv](./campaign-master-phase-2.csv)
 - [campaign-master-phase-3.csv](./campaign-master-phase-3.csv)
-- [campaign-master-revisied-url-schem.csv](./campaign-master-revisied-url-schem.csv)
+- [campaign-master-revised-url-schema.csv](./campaign-master-revised-url-schema.csv)
 
 ### Keyword Master
 - [FINAL_cal_preserving_consolidated_keywords - FINAL_cal_preserving_consolidated_keywords.csv](./FINAL_cal_preserving_consolidated_keywords%20-%20FINAL_cal_preserving_consolidated_keywords.csv)
@@ -102,8 +100,6 @@
 ---
 
 ## Legacy / Phase 3 LP Specs (If Still Active)
-
-> These appear to be the older Phase 3 LP specs. Keep if still in use; otherwise consider moving to an `/archive/` folder.
 
 ### Residential
 - [lp-spec-residential-catch-all-phase-3.mdx](./lp-spec-residential-catch-all-phase-3.mdx)
@@ -130,5 +126,5 @@
 
 ## Maintenance Notes
 
-- Keep filenames stable; if you rename/move files, update this README so it stays the single source of navigation truth.
-- If any links 404, check for hidden characters in filenames and normalize them (rename to clean ASCII).
+- If you rename/move files, update this README so it stays the single source of navigation truth.
+- If any link 404s, check for hidden characters in filenames and normalize them (rename to clean ASCII).
