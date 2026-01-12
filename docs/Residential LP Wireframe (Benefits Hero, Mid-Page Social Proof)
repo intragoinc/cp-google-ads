@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Residential {{SURFACE}} Restoration | Cal Preserving</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Basic wireframe styling hook -->
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; }
+    header, section, footer { padding: 24px 16px; max-width: 960px; margin: 0 auto; }
+    .hero { padding-top: 32px; padding-bottom: 32px; }
+    .hero-grid { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+    .hero-main { flex: 1 1 320px; }
+    .hero-form { flex: 1 1 320px; border: 1px solid #ccc; padding: 16px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+    .badge { font-size: 12px; padding: 4px 8px; border-radius: 999px; border: 1px solid #ccc; }
+    .btn-primary { display: inline-block; padding: 10px 18px; border-radius: 4px; border: none; cursor: pointer; }
+    .layout-two-col { display: flex; flex-wrap: wrap; gap: 24px; }
+    .col { flex: 1 1 280px; }
+    .section-label { text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px; color: #777; margin-bottom: 4px; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { padding: 4px 10px; border-radius: 999px; border: 1px solid #ddd; font-size: 12px; }
+    .process-steps ol { padding-left: 18px; }
+    .process-steps li { margin-bottom: 8px; }
+    .card { border: 1px solid #ddd; padding: 16px; margin-bottom: 16px; border-radius: 4px; }
+    .faq-item + .faq-item { margin-top: 12px; }
+    .faq-question { font-weight: 600; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    footer { font-size: 12px; color: #777; margin-bottom: 32px; }
+    @media (max-width: 768px) {
+      header, section, footer { padding: 20px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="layout-two-col" style="align-items:center;">
+      <div>
+        <div class="section-label">Cal Preserving</div>
+        <h1>Residential {{SURFACE}} Restoration &amp; Maintenance</h1>
+        <p style="max-width:520px;">
+          Expert exterior wood care for Bay Area homes. Restore, protect, and extend the life of your {{SURFACE}} without unnecessary replacement.
+        </p>
+      </div>
+      <div style="text-align:right; font-size:14px;">
+        <!-- Optional phone on LP (not used in ads) -->
+        <div><strong>Questions?</strong></div>
+        <div>Call: (xxx) xxx-xxxx</div>
+        <div>Mon–Fri, 9am–5pm</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-grid">
+      <!-- Hero Copy -->
+      <div class="hero-main">
+        <div class="badge-row">
+          <span class="badge">Bay Area Residential</span>
+          <span class="badge">Exterior Wood Specialists</span>
+          <span class="badge">Licensed &amp; Insured</span>
+        </div>
+
+        <!-- H1 CONFIG: BENEFITS-FIRST HERO -->
+        <h2>Restore &amp; Protect Your {{SURFACE}} — Without Full Replacement</h2>
+        <p>
+          If your {{SURFACE}} is faded, weathered, or starting to fail, we specialize in professional restoration that brings it back to life and protects it against Bay Area weather.
+        </p>
+
+        <ul>
+          <li>Professional inspection, prep, restoration, and sealing.</li>
+          <li>Experience with redwood, hardwood, and premium exterior woods.</li>
+          <li>No payment due until you’re happy with the completed work.</li>
+        </ul>
+
+        <button class="btn-primary">
+          Request a Free Estimate
+        </button>
+        <div style="font-size:12px; color:#777; margin-top:8px;">
+          No obligation. We’ll review your project and provide a detailed estimate.
+        </div>
+      </div>
+
+      <!-- Hero Form (Estimate Request) -->
+      <aside class="hero-form">
+        <div class="section-label">Start Here</div>
+        <h3>Request a Free Estimate</h3>
+        <p style="font-size:14px;">
+          Tell us a bit about your project and we’ll follow up with next steps.
+        </p>
+
+        <!-- Wireframe form: fields only (implementation per your spec) -->
+        <form>
+          <!-- Job Site -->
+          <label>Street Address *</label><br />
+          <input type="text" name="street" style="width:100%; margin-bottom:8px;" /><br />
+
+          <div class="layout-two-col">
+            <div class="col">
+              <label>City *</label><br />
+              <input type="text" name="city" style="width:100%; margin-bottom:8px;" />
+            </div>
+            <div class="col">
+              <label>Zip *</label><br />
+              <input type="text" name="zip" style="width:100%; margin-bottom:8px;" />
+            </div>
+          </div>
+
+          <!-- Property Type -->
+          <label>Property Type *</label><br />
+          <label><input type="radio" name="property_type" value="residential" checked /> Residential</label><br />
+          <label><input type="radio" name="property_type" value="commercial" /> Commercial</label><br /><br />
+
+          <!-- Surfaces (multi-select) -->
+          <label>Surfaces to be addressed *</label><br />
+          <label><input type="checkbox" name="surface_deck" /> Deck</label><br />
+          <label><input type="checkbox" name="surface_siding" /> Siding</label><br />
+          <label><input type="checkbox" name="surface_structures" /> Fence / Exterior Structures</label><br />
+          <label><input type="checkbox" name="surface_furniture" /> Patio Furniture</label><br />
+          <label><input type="checkbox" name="surface_hardscape" /> Hardscape (Pressure Washing)</label><br />
+          <label><input type="checkbox" name="surface_other" /> Other</label><br /><br />
+
+          <!-- Timing -->
+          <label>When are you planning to start? *</label><br />
+          <select name="project_timing" style="width:100%; margin-bottom:8px;">
+            <option value="asap">ASAP</option>
+            <option value="within_1_month">Within 1 month</option>
+            <option value="within_3_months">Within 3 months</option>
+            <option value="just_exploring">Just exploring options</option>
+          </select>
+
+          <!-- Contact -->
+          <label>First Name *</label><br />
+          <input type="text" name="first_name" style="width:100%; margin-bottom:8px;" /><br />
+
+          <label>Last Name *</label><br />
+          <input type="text" name="last_name" style="width:100%; margin-bottom:8px;" /><br />
+
+          <label>Phone *</label><br />
+          <input type="tel" name="phone" style="width:100%; margin-bottom:8px;" /><br />
+
+          <label>Email *</label><br />
+          <input type="email" name="email" style="width:100%; margin-bottom:8px;" /><br />
+
+          <!-- SMS Consent -->
+          <label>
+            <input type="checkbox" name="sms_opt_in" />
+            I agree to receive SMS updates about my estimate. Reply STOP to opt out.
+          </label><br /><br />
+
+          <button type="submit" class="btn-primary" style="width:100%;">
+            Request a Free Estimate
+          </button>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+    <!-- KEY BENEFITS / VALUE PROPS -->
+    <section>
+      <div class="section-label">Why Cal Preserving</div>
+      <h2>Why Homeowners Trust Us for {{SURFACE}} Restoration</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Exterior Wood Specialists</h3>
+          <p>
+            We focus specifically on exterior wood — decks, siding, fences, and structures — not generic painting or handyman work.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Preserve, Don’t Replace</h3>
+          <p>
+            Our process is designed to restore and extend the life of existing wood, often avoiding the cost and disruption of full replacement.
+          </p>
+        </div>
+        <div class="card">
+          <h3>No Payment Until You’re Happy</h3>
+          <p>
+            For residential work, you don’t pay for the job until you’re satisfied with the result.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF (MID-PAGE) -->
+    <section>
+      <div class="section-label">Social Proof</div>
+      <h2>What Bay Area Homeowners Are Saying</h2>
+      <div class="layout-two-col">
+        <div class="col">
+          <!-- Placeholder reviews -->
+          <div class="card">
+            <p><strong>“Our deck looks brand new again.”</strong></p>
+            <p style="font-size:14px;">
+              “Cal Preserving brought our weathered redwood deck back to life. They were on time, professional, and left everything clean.”
+            </p>
+            <p style="font-size:12px; color:#777;">Homeowner • Berkeley, CA</p>
+          </div>
+          <div class="card">
+            <p><strong>“Excellent communication and craftsmanship.”</strong></p>
+            <p style="font-size:14px;">
+              “They explained each step of the process and delivered exactly what they promised.”
+            </p>
+            <p style="font-size:12px; color:#777;">Homeowner • Oakland, CA</p>
+          </div>
+        </div>
+        <div class="col">
+          <!-- Badge stack -->
+          <div class="card">
+            <p><strong>Credentials &amp; Assurance</strong></p>
+            <ul style="font-size:14px;">
+              <li>Licensed &amp; insured contractor</li>
+              <li>Specialized in exterior wood preservation</li>
+              <li>Experience with premium woods and finishes</li>
+              <li>Photo documentation available upon request</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION (RESIDENTIAL-ORIENTED) -->
+    <section class="process-steps">
+      <div class="section-label">Our Process</div>
+      <h2>How Our {{SURFACE}} Restoration Process Works</h2>
+      <ol>
+        <li>
+          <strong>Assess &amp; Plan</strong> — We review the condition of your {{SURFACE}}, identify issues (fading, peeling, cupping, rot), and recommend the right scope of work.
+        </li>
+        <li>
+          <strong>Prep &amp; Clean</strong> — Proper cleaning, stripping, and surface preparation to ensure finishes bond correctly and wear evenly.
+        </li>
+        <li>
+          <strong>Repair Where Needed</strong> — We address damaged boards, fasteners, or trim to restore structural integrity where applicable.
+        </li>
+        <li>
+          <strong>Refinish &amp; Protect</strong> — Application of appropriate stains, oils, or coatings chosen for your wood species and exposure.
+        </li>
+        <li>
+          <strong>Final Review</strong> — Walkthrough and final touch-ups so you are confident in both appearance and protection.
+        </li>
+      </ol>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section>
+      <div class="section-label">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">How much does {{SURFACE}} restoration typically cost?</div>
+        <p style="font-size:14px;">
+          Pricing depends on size, condition, and access. Once we understand your project details, we’ll provide a clear estimate before any work begins.
+        </p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you handle both cleaning and refinishing?</div>
+        <p style="font-size:14px;">
+          Yes. Our process covers cleaning, prep, repairs where needed, and the full refinishing/sealing steps for exterior wood.
+        </p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What areas of the Bay Area do you serve?</div>
+        <p style="font-size:14px;">
+          We serve core Bay Area neighborhoods and selected fringe areas. Share your address and we’ll confirm coverage.
+        </p>
+      </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section>
+      <div class="section-label">Next Step</div>
+      <h2>Ready to Restore Your {{SURFACE}}?</h2>
+      <p>
+        Share a few details about your project and we’ll follow up with a tailored estimate and recommended next steps.
+      </p>
+      <button class="btn-primary">
+        Request a Free Estimate
+      </button>
+      <div style="font-size:12px; color:#777; margin-top:8px;">
+        No obligation. We respect your time and your home.
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>© Cal Preserving — Exterior Wood Restoration &amp; Maintenance</div>
+      <div style="margin-top:4px; font-size:11px;">
+        This page is for residential {{SURFACE}} services in the Bay Area. Commercial and HOA/PM services are available on request.
+      </div>
+    </footer>
+
+</body>
+</html>
