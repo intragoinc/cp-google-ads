@@ -1,0 +1,38 @@
+# 03_03 – Form & Lead Delivery Architecture
+
+```mermaid
+flowchart LR
+  subgraph Client["Client Browser"]
+    LP["Landing Page\n(Residential / Commercial)"]
+    Form["WordPress Form UI\n(Elementor / Shortcode)"]
+    Recaptcha["reCAPTCHA Widget"]
+  end
+
+  subgraph WP["WordPress Server"]
+    PHP["PHP Handler Endpoint\n(e.g. /wp-json/cp/lead)"]
+    Logs["Optional Local Logs / Backup\n(DB table / file / email)"]
+  end
+
+  subgraph SF["Salesforce Org"]
+    SFEndpoint["Web-to-Lead HTTPS Endpoint"]
+    SFQueue["Salesforce Internal Queue"]
+    Lead["Lead Object\n(Lead, Activities, etc.)"]
+  end
+
+  LP --> Form
+  Form --> Recaptcha
+  Recaptcha -->|token + form payload| PHP
+
+  PHP -->|Validated Lead POST\n(web-to-lead)| SFEndpoint
+  PHP -.->|Optional log / backup| Logs
+
+  SFEndpoint --> SFQueue --> Lead
+
+  %% Trust boundaries
+  classDef client fill:#e3f2fd,stroke:#1e88e5,color:#0d47a1;
+  classDef server fill:#e8f5e9,stroke:#43a047,color:#1b5e20;
+  classDef sf fill:#f3e5f5,stroke:#8e24aa,color:#4a148c;
+
+  class LP,Form,Recaptcha client;
+  class PHP,Logs server;
+  class SFEndpoint,SFQueue,Lead sf;
