@@ -1,21 +1,11 @@
-campaign,geo,persona,surface,lp_url
-Deck - Bay Area - Residential,b,residential,deck,https://calpreserving.com/residential/deck/b/
-Deck - Fringe - Residential,f,residential,deck,https://calpreserving.com/residential/deck/f/
-Siding - Bay Area - Residential,b,residential,siding,https://calpreserving.com/residential/siding/b/
-Siding - Fringe - Residential,f,residential,siding,https://calpreserving.com/residential/siding/f/
-Wood Structures - Bay Area - Residential,b,residential,wood-structures,https://calpreserving.com/residential/wood-structures/b/
-Wood Structures - Fringe - Residential,f,residential,wood-structures,https://calpreserving.com/residential/wood-structures/f/
-Pressure - Bay Area - Residential,b,residential,pressure,https://calpreserving.com/residential/pressure/b/
-Pressure - Fringe - Residential,f,residential,pressure,https://calpreserving.com/residential/pressure/f/
-Catch-All - Bay Area - Residential,b,residential,catch-all,https://calpreserving.com/residential/catch-all/b/
-Catch-All - Fringe - Residential,f,residential,catch-all,https://calpreserving.com/residential/catch-all/f/
-Deck - Bay Area - Commercial,b,commercial,deck,https://calpreserving.com/commercial/deck/b/
-Deck - Fringe - Commercial,f,commercial,deck,https://calpreserving.com/commercial/deck/f/
-Siding - Bay Area - Commercial,b,commercial,siding,https://calpreserving.com/commercial/siding/b/
-Siding - Fringe - Commercial,f,commercial,siding,https://calpreserving.com/commercial/siding/f/
-Wood Structures - Bay Area - Commercial,b,commercial,wood-structures,https://calpreserving.com/commercial/wood-structures/b/
-Wood Structures - Fringe - Commercial,f,commercial,wood-structures,https://calpreserving.com/commercial/wood-structures/f/
-Pressure - Bay Area - Commercial,b,commercial,pressure,https://calpreserving.com/commercial/pressure/b/
-Pressure - Fringe - Commercial,f,commercial,pressure,https://calpreserving.com/commercial/pressure/f/
-Catch-All - Bay Area - Commercial,b,commercial,catch-all,https://calpreserving.com/commercial/catch-all/b/
-Catch-All - Fringe - Commercial,f,commercial,catch-all,https://calpreserving.com/commercial/catch-all/f/
+campaign,persona,surface,lp_url
+Deck,residential,deck,https://calpreserving.com/residential/deck/
+Siding,residential,siding,https://calpreserving.com/residential/siding/
+Wood Structures,residential,wood-structures,https://calpreserving.com/residential/wood-structures/
+Pressure,residential,pressure,https://calpreserving.com/residential/pressure/
+Catch-All,residential,catch-all,https://calpreserving.com/residential/catch-all/
+Deck,commercial,deck,https://calpreserving.com/commercial/deck/
+Siding,commercial,siding,https://calpreserving.com/commercial/siding/
+Wood Structures,commercial,wood-structures,https://calpreserving.com/commercial/wood-structures/
+Pressure,commercial,pressure,https://calpreserving.com/commercial/pressure/
+Catch-All,commercial,catch-all,https://calpreserving.com/commercial/catch-all/
