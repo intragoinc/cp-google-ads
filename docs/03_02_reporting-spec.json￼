@@ -1,0 +1,297 @@
+{
+  "version": "1.0",
+  "file": "03_02_reporting-spec.md",
+  "objectives": [
+    "Measure profitability of Google Ads spend by surface, geo, persona",
+    "Understand lead to job economics",
+    "Support operational decisions on surfaces, geos, and commercial mix",
+    "Minimize rebuild work with phase-stable reporting"
+  ],
+  "dimensions": {
+    "paid": [
+      "paid_phase__c",
+      "paid_surface_primary__c",
+      "paid_geo__c",
+      "paid_persona__c",
+      "paid_campaign_family__c",
+      "paid_network__c"
+    ],
+    "operational": [
+      "operational_surface_primary__c",
+      "surfaces_multi__c",
+      "surfaces_count__c",
+      "operational_persona__c",
+      "property_relationship__c",
+      "project_timing__c",
+      "address_city__c",
+      "address_postal__c",
+      "address_state__c"
+    ],
+    "funnel": [
+      "lead_status",
+      "lead_source",
+      "stage_name",
+      "is_won",
+      "is_closed"
+    ],
+    "economic": [
+      "amount",
+      "gross_margin__c",
+      "job_type__c"
+    ]
+  },
+  "metrics": {
+    "funnel": [
+      "leads",
+      "qualified_leads",
+      "opportunities",
+      "jobs_won",
+      "lead_to_opportunity_rate",
+      "opportunity_to_won_rate",
+      "lead_to_won_rate"
+    ],
+    "economic": [
+      "total_job_value_won",
+      "average_job_value_won",
+      "total_gross_margin",
+      "average_margin_percent"
+    ],
+    "cost": [
+      "spend",
+      "cpl",
+      "cpql",
+      "cpo",
+      "cac",
+      "roas",
+      "margin_adjusted_roas"
+    ]
+  },
+  "dashboards": [
+    {
+      "id": "P1-A",
+      "name": "Lead & Job Overview (Bay Area Only)",
+      "phase": [
+        "p1"
+      ],
+      "filters": {
+        "paid_phase__c": [
+          "p1"
+        ],
+        "paid_geo__c": [
+          "bay_area"
+        ],
+        "lead_source": [
+          "Google Ads"
+        ]
+      },
+      "dimensions": [
+        "paid_surface_primary__c",
+        "operational_surface_primary__c",
+        "project_timing__c"
+      ],
+      "metrics": [
+        "leads",
+        "jobs_won",
+        "total_job_value_won",
+        "average_job_value_won",
+        "cpl",
+        "cac"
+      ]
+    },
+    {
+      "id": "P1-B",
+      "name": "Funnel Conversion (Bay Area Only)",
+      "phase": [
+        "p1"
+      ],
+      "filters": {
+        "paid_phase__c": [
+          "p1"
+        ],
+        "paid_geo__c": [
+          "bay_area"
+        ],
+        "lead_source": [
+          "Google Ads"
+        ]
+      },
+      "dimensions": [
+        "paid_surface_primary__c"
+      ],
+      "metrics": [
+        "leads",
+        "opportunities",
+        "jobs_won",
+        "lead_to_opportunity_rate",
+        "opportunity_to_won_rate",
+        "lead_to_won_rate"
+      ]
+    },
+    {
+      "id": "P2-A",
+      "name": "Geo Split Performance (Bay Area vs Fringe)",
+      "phase": [
+        "p1",
+        "p2"
+      ],
+      "filters": {
+        "paid_phase__c": [
+          "p1",
+          "p2"
+        ],
+        "lead_source": [
+          "Google Ads"
+        ]
+      },
+      "dimensions": [
+        "paid_geo__c",
+        "paid_surface_primary__c"
+      ],
+      "metrics": [
+        "leads",
+        "jobs_won",
+        "total_job_value_won",
+        "average_job_value_won",
+        "cpl",
+        "cac",
+        "roas"
+      ]
+    },
+    {
+      "id": "P3-A",
+      "name": "Residential vs Commercial Mix & Performance",
+      "phase": [
+        "p3"
+      ],
+      "filters": {
+        "paid_phase__c": [
+          "p3"
+        ],
+        "lead_source": [
+          "Google Ads"
+        ]
+      },
+      "dimensions": [
+        "paid_persona__c",
+        "paid_surface_primary__c",
+        "paid_geo__c"
+      ],
+      "metrics": [
+        "leads",
+        "jobs_won",
+        "total_job_value_won",
+        "average_job_value_won",
+        "cpl",
+        "cac",
+        "roas"
+      ]
+    },
+    {
+      "id": "P3-B",
+      "name": "Property Manager / HOA / Facilities View",
+      "phase": [
+        "p3"
+      ],
+      "filters": {
+        "paid_phase__c": [
+          "p3"
+        ],
+        "lead_source": [
+          "Google Ads"
+        ],
+        "operational_persona__c": [
+          "commercial"
+        ],
+        "property_relationship__c": [
+          "property_manager",
+          "contractor",
+          "architect",
+          "realtor"
+        ]
+      },
+      "dimensions": [
+        "paid_geo__c",
+        "paid_surface_primary__c"
+      ],
+      "metrics": [
+        "leads",
+        "jobs_won",
+        "total_job_value_won",
+        "cpl",
+        "cac",
+        "roas"
+      ]
+    }
+  ],
+  "tabular_reports": [
+    {
+      "id": "R1",
+      "name": "Lead Detail by Surface & Geo",
+      "filters": {
+        "lead_source": [
+          "Google Ads"
+        ]
+      },
+      "columns": [
+        "lead_id",
+        "created_date",
+        "paid_surface_primary__c",
+        "paid_geo__c",
+        "operational_surface_primary__c",
+        "surfaces_multi__c",
+        "project_timing__c",
+        "property_type__c",
+        "property_relationship__c"
+      ]
+    },
+    {
+      "id": "R2",
+      "name": "Opportunity & Job Detail",
+      "filters": {
+        "originating_lead_source": [
+          "Google Ads"
+        ]
+      },
+      "columns": [
+        "opportunity_id",
+        "stage_name",
+        "is_won",
+        "amount",
+        "gross_margin__c",
+        "paid_surface_primary__c",
+        "paid_geo__c",
+        "paid_persona__c",
+        "operational_surface_primary__c"
+      ]
+    },
+    {
+      "id": "R3",
+      "name": "Jobs Won Economics by Segment",
+      "group_by": [
+        "paid_surface_primary__c",
+        "paid_geo__c",
+        "paid_persona__c"
+      ],
+      "metrics": [
+        "jobs_won",
+        "total_job_value_won",
+        "average_job_value_won",
+        "total_gross_margin",
+        "average_margin_percent"
+      ]
+    },
+    {
+      "id": "R4",
+      "name": "Timing Band Analysis",
+      "group_by": [
+        "project_timing__c",
+        "paid_surface_primary__c"
+      ],
+      "metrics": [
+        "leads",
+        "jobs_won",
+        "lead_to_won_rate"
+      ]
+    }
+  ]
+}
