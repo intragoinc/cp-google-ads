@@ -167,7 +167,7 @@ Create a repeatable, measurable paid search channel that:
 - Residential: "You don't pay until you're happy" guarantee
 - Commercial: Workmanship guarantee + operations focus
 
-### Attribution Rules (
+### Attribution Rules
 
 - Form submission = primary conversion event
 - GCLID captured for offline conversion import
