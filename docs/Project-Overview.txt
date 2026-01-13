@@ -26,6 +26,7 @@ Project Overview
   ├───────┼──────────────────────────────────────────────────────────┤               
   │ 3     │ Adds Commercial/HOA personas with separate landing pages │               
   └───────┴──────────────────────────────────────────────────────────┘               
+
   Key Components                                                                     
                                                                                      
   - Campaign Masters - CSV files mapping keywords → ad groups → landing pages        
@@ -34,3 +35,132 @@ Project Overview
   - SFDC Mapping - Web form → Salesforce field alignment                             
   - Reporting Spec - KPIs (CPL, ROAS, CAC) and dashboard structure                   
   - QA Checklist - Launch validation process
+
+  Target Personas                                                                    
+                                                                                     
+  Residential                                                                        
+  - Homeowners, renters with authority, property sellers/buyers                      
+  - Motivated by: gray/aged wood, peeling, mold, upcoming events, property sales     
+  - Lower surface knowledge ("Is this cedar?")                                       
+  - Uses "near me" searches, city names                                              
+  - CTA: "Request a Free Estimate"                                                   
+  - Key message: "You don't pay until you're happy"                                  
+                                                                                     
+  Commercial/HOA                                                                     
+  - Property managers, facility managers, HOA boards, multi-unit owners              
+  - Motivated by: maintenance cycles, liability, board requirements, reserve budgets 
+  - Higher technical knowledge                                                       
+  - Searches by region, uses "proposal" language                                     
+  - CTA: "Request a Proposal"                                                        
+  - Key message: Risk mitigation, compliance, reliability                            
+                                                                                     
+  Keyword Strategy                                                                   
+                                                                                     
+  47 keywords across 5 surfaces using Exact + Phrase match only (no Broad)           
+  ┌───────────────────┬────────────────────────────────────────────┐                 
+  │      Surface      │                  Keywords                  │                 
+  ├───────────────────┼────────────────────────────────────────────┤                 
+  │ Deck              │ 12 (repair, refinishing, sealing, species) │                 
+  ├───────────────────┼────────────────────────────────────────────┤                 
+  │ Siding            │ 9 (repair, sealing, species)               │                 
+  ├───────────────────┼────────────────────────────────────────────┤                 
+  │ Structures/Fences │ 13 (repair, refinishing, furniture)        │                 
+  ├───────────────────┼────────────────────────────────────────────┤                 
+  │ Pressure Washing  │ 4 (hardscape, concrete, stone, patio)      │                 
+  ├───────────────────┼────────────────────────────────────────────┤                 
+  │ Catch-All         │ 8 (exterior wood restoration/refinishing)  │                 
+  └───────────────────┴────────────────────────────────────────────┘                 
+  Negative Keywords block:                                                           
+  - DIY/tutorials, job boards                                                        
+  - Home Depot, Lowe's, Amazon                                                       
+  - Composite brands (Trex, TimberTech, Azek)                                        
+  - Materials: PVC, vinyl, composite, fiber cement
+  Landing Pages                                                                      
+                                                                                     
+  8-section standard layout:                                                         
+  1. Hero with CTA                                                                   
+  2. Pain/Problem                                                                    
+  3. Services                                                                        
+  4. Process (6-8 steps)                                                             
+  5. Why Cal Preserving                                                              
+  6. Service Areas                                                                   
+  7. FAQs                                                                            
+  8. Footer CTA                                                                      
+                                                                                     
+  10 total LPs in Phase 3: 5 surfaces × 2 personas                                   
+                                                                                     
+  Key Metrics                                                                        
+  ┌────────────┬──────────────────────────────────────────────────────┐              
+  │    Type    │                       Metrics                        │              
+  ├────────────┼──────────────────────────────────────────────────────┤              
+  │ Revenue    │ Close rate, avg job size, margin, revenue per lead   │              
+  ├────────────┼──────────────────────────────────────────────────────┤              
+  │ Marketing  │ CPL, CAC, CTR, conversion rate, quality score        │              
+  ├────────────┼──────────────────────────────────────────────────────┤              
+  │ Operations │ Estimator load, crew utilization, routing efficiency │              
+  └────────────┴──────────────────────────────────────────────────────┘              
+
+  Notable Business Rules                                                             
+                                                                                     
+  - Bay Area vs Fringe: Different job minimums (Fringe higher due to travel)         
+  - Form requires: Property type, at least 1 surface, full address, contact info,    
+  timing                                                                             
+  - GCLID capture for offline conversion tracking                                    
+  - No Broad match to avoid composite/DIY traffic leakage                            
+  - Phase-gated rollout: Each phase builds on the last without rework
+
+  Implementation Specifics                                                           
+                                                                                     
+  Campaign Structure by Phase                                                        
+                                                                                     
+  Phase 1 (Bay Area, Mixed Persona): 5 campaigns                                     
+  - Bay Area Deck, Siding, Structures, Pressure, Catch-All                           
+                                                                                     
+  Phase 2 (Adds Fringe): 8+ campaigns                                                
+  - Duplicates Phase 1 for Fringe geography                                          
+  - Fringe omits Pressure & Furniture (volume economics)                             
+                                                                                     
+  Phase 3 (Persona Split): Full matrix                                               
+  - Every campaign splits into Residential + Commercial versions                     
+  - Example: Bay Area Deck - Residential, Bay Area Deck - Commercial                 
+                                                                                     
+  URL Schema                                                                         
+  ┌────────────┬───────────────────────────────┬──────────────────────────────┐      
+  │  Surface   │          Residential          │          Commercial          │      
+  ├────────────┼───────────────────────────────┼──────────────────────────────┤      
+  │ Deck       │ /residential/wood-deck/       │ /commercial/wood-deck/       │      
+  ├────────────┼───────────────────────────────┼──────────────────────────────┤      
+  │ Siding     │ /residential/wood-siding/     │ /commercial/wood-siding/     │      
+  ├────────────┼───────────────────────────────┼──────────────────────────────┤      
+  │ Structures │ /residential/wood-structures/ │ /commercial/wood-structures/ │      
+  ├────────────┼───────────────────────────────┼──────────────────────────────┤      
+  │ Furniture  │ /residential/wood-furniture/  │ /commercial/wood-furniture/  │      
+  ├────────────┼───────────────────────────────┼──────────────────────────────┤      
+  │ Pressure   │ /residential/pressure/        │ /commercial/pressure/        │      
+  ├────────────┼───────────────────────────────┼──────────────────────────────┤      
+  │ Catch-All  │ /residential/                 │ /commercial/                 │      
+  └────────────┴───────────────────────────────┴──────────────────────────────┘      
+  Sample Landing Page Copy               
+
+  Residential Deck Hero:                                                             
+  "Restore & Protect Your Wood Deck in the Bay Area"                                 
+  "Cedar, Redwood, IPE, Teak & Hardwood decks professionally cleaned, prepped,       
+  stained and sealed..."                                                             
+                                                                                     
+  Commercial Pressure Hero:                                                          
+  "Commercial Pressure Washing for Walkways, Patios & Hardscape"                     
+  "Keep common areas clean, safe and presentable for tenants, guests and staff..."   
+                                                                                     
+  RACI Summary                                                                       
+  ┌────────────────────────┬─────────────┬─────────────┬─────────────┐               
+  │          Area          │  Marketing  │     Web     │ Salesforce  │               
+  ├────────────────────────┼─────────────┼─────────────┼─────────────┤               
+  │ Campaign/keyword setup │ Accountable │ Informed    │ Consulted   │               
+  ├────────────────────────┼─────────────┼─────────────┼─────────────┤               
+  │ LP implementation      │ Consulted   │ Accountable │ Informed    │               
+  ├────────────────────────┼─────────────┼─────────────┼─────────────┤               
+  │ Form → SFDC mapping    │ Informed    │ Responsible │ Accountable │               
+  ├────────────────────────┼─────────────┼─────────────┼─────────────┤               
+  │ Reporting/dashboards   │ Accountable │ Informed    │ Responsible │               
+  └────────────────────────┴─────────────┴─────────────┴─────────────┘               
+     
