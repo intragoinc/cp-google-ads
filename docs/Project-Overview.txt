@@ -1,0 +1,36 @@
+Project Overview                                                                   
+                                                                                     
+  This is a Google Ads campaign system for Cal Preserving, a Bay Area exterior wood  
+  preservation and restoration company (decks, siding, fences, pressure washing).    
+                                                                                     
+  The Problem                                                                        
+                                                                                     
+  Cal Preserving relied on organic search and referrals, creating unpredictable lead 
+  flow that's hard to scale.                                                         
+                                                                                     
+  The Solution                                                                       
+                                                                                     
+  A structured, phased paid search system that:                                      
+  - Targets high-value customers for premium wood restoration services               
+  - Filters out low-value traffic (DIY, budget seekers, composite materials)         
+  - Enables geographic and market expansion                                          
+  - Improves lead quality through precise targeting                                  
+                                                                                     
+  Three Phases                                                                       
+  ┌───────┬──────────────────────────────────────────────────────────┐               
+  │ Phase │                          Scope                           │               
+  ├───────┼──────────────────────────────────────────────────────────┤               
+  │ 1     │ Bay Area + Residential only (baseline launch)            │               
+  ├───────┼──────────────────────────────────────────────────────────┤               
+  │ 2     │ Adds Fringe geographies (extended service regions)       │               
+  ├───────┼──────────────────────────────────────────────────────────┤               
+  │ 3     │ Adds Commercial/HOA personas with separate landing pages │               
+  └───────┴──────────────────────────────────────────────────────────┘               
+  Key Components                                                                     
+                                                                                     
+  - Campaign Masters - CSV files mapping keywords → ad groups → landing pages        
+  - Landing Page Specs - 5 residential + 5 commercial page designs                   
+  - Segmentation Taxonomy - Definitions for geo, persona, surface, intent            
+  - SFDC Mapping - Web form → Salesforce field alignment                             
+  - Reporting Spec - KPIs (CPL, ROAS, CAC) and dashboard structure                   
+  - QA Checklist - Launch validation process
