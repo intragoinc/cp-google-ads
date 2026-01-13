@@ -137,7 +137,7 @@ Create a repeatable, measurable paid search channel that:
 | LP copy & structure | Accountable | Consulted | Informed |
 | LP implementation | Consulted | Accountable | Informed |
 | Attribution implementation | Accountable | Informed | Accountable |
-| QA & go-live approval | Accountable | Responsible | Consulted |
+| Quality Assurance | Accountable | Responsible | Consulted |
 
 ---
 
