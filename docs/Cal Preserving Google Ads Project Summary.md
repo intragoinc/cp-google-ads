@@ -70,17 +70,6 @@ Create a repeatable, measurable paid search channel that:
 | Pressure | `/residential/pressure/` | `/commercial/pressure/` |
 | Catch-All | `/residential/` | `/commercial/` |
 
-### Standard LP Layout (8 Sections)
-
-1. **Hero** - Headline, subheadline, primary CTA, background image
-2. **Pain/Problem** - Common issues and degradation signs
-3. **Services** - What's included in the service
-4. **Process** - 6-8 step workflow
-5. **Why Cal Preserving** - Differentiators and proof points
-6. **Service Areas** - Geographic coverage
-7. **FAQs** - 4-6 common questions
-8. **Footer CTA** - Final call to action
-
 ---
 
 ## Keyword Strategy
