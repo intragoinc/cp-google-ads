@@ -274,7 +274,7 @@ This mapping sits in the middle of the system and connects upstream Ads configur
 | Upstream Source / Spec                             | Mapping Layer                  | Downstream Spec / Output                 |
 | -------------------------------------------------- | ------------------------------ | ---------------------------------------- |
 | `campaign-master-phase-1/2/3.csv`                  | → `03_01_sfdc-mapping.csv`     | → `03_02_reporting-spec.md`              |
-| `estimate_request_form_v1.mdx` (canonical form)    |                                | → SFDC Lead schema + dashboards          |
+| `02_17_lp-spec.md` (Section 4: Form Module Spec)   |                                | → SFDC Lead schema + dashboards          |
 
 The overall flow is:
 

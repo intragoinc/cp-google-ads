@@ -5,10 +5,9 @@ This document defines the **canonical reporting specification** for the Cal Pres
 
 It is designed to work with:
 
-- Campaign masters (Phase 1–3) in `doc2/`
-- Keyword inventory (`FINAL_cal_preserving_consolidated_keywords…csv`)
+- Campaign masters: `campaign-master-phase-1.csv`, `campaign-master-phase-2.csv`, `campaign-master-phase-3.csv`
 - Salesforce mapping in `03_01_sfdc-mapping.csv` + `03_01_sfdc-mapping.md`
-- Estimate request form spec (`estimate_request_form_v1.mdx`)
+- Form specification in `02_17_lp-spec.md` (Section 4: Form Module Spec)
 
 This file answers:
 
@@ -378,7 +377,7 @@ To fully power these reports, the following integrations are recommended:
    - Nightly sync of Leads, Opportunities, and key custom fields.
 
 3. **Form System → Salesforce**
-   - All fields in `estimate_request_form_v1.mdx` must map cleanly to SFDC fields as per `03_01_sfdc-mapping.csv`.
+   - All fields in `02_17_lp-spec.md` (Section 4) must map cleanly to SFDC fields as per `03_01_sfdc-mapping.csv`.
 
 ---
 

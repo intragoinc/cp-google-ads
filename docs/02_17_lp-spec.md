@@ -13,6 +13,7 @@ Turn the copy docs:
 - `02_14_lp-exteriorwood-residential.md`
 - `02_15_lp-exteriorwood-commercial.md`
 - `02_16_lp-furniture-residential.md`
+- `02_18_lp-furniture-commercial.md`
 
 into **consistent, fast, conversion-oriented Elementor pages** that share a common layout and component system.
 

@@ -16,7 +16,7 @@ Phases:
 
 - Campaigns: Deck, Siding, Structures, Pressure, Catch-All (Bay Area only).
 - LP: Residential-focused copy but not strictly split from commercial yet.
-- Form: `estimate_request_form_v1`.
+- Form: See `02_17_lp-spec.md` (Section 4: Form Module Spec).
 
 **QA Checklist:**
 
@@ -86,7 +86,7 @@ Phases:
 For every phase:
 
 - If the **form structure** is changed:
-  - Update `estimate_request_form_v1.mdx` (or successor).
+  - Update `02_17_lp-spec.md` (Section 4: Form Module Spec).
   - Update `03_04_web-php-sfdc-field-contract.md`.
   - Re-run regression QA for all active phases.
 
