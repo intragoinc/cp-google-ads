@@ -13,6 +13,8 @@ Create a repeatable, measurable paid search channel that:
 - Supports geographic and market expansion
 - Integrates with Salesforce for attribution and reporting
 
+For detailed implementation timeline and hour estimates, see [project-plan.md](./project-plan.md).
+
 ---
 
 ## Three Phases
@@ -63,10 +65,9 @@ Create a repeatable, measurable paid search channel that:
 
 | Surface | Residential | Commercial |
 |---------|-------------|------------|
-| Deck | `/residential/wood-deck/` | `/commercial/wood-deck/` |
-| Siding | `/residential/wood-siding/` | `/commercial/wood-siding/` |
+| Deck | `/residential/deck/` | `/commercial/deck/` |
+| Siding | `/residential/siding/` | `/commercial/siding/` |
 | Structures | `/residential/wood-structures/` | `/commercial/wood-structures/` |
-| Furniture | `/residential/wood-furniture/` | `/commercial/wood-furniture/` |
 | Pressure | `/residential/pressure/` | `/commercial/pressure/` |
 | Catch-All | `/residential/` | `/commercial/` |
 
