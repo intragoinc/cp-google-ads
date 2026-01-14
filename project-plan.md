@@ -1,7 +1,5 @@
 # Cal Preserving Google Ads Initiative — Project Plan
 
-**GitHub Project:** [Project Board](https://github.com/users/intragoinc/projects/3)
-
 ## Team
 
 | Role | Person | Responsibility |
