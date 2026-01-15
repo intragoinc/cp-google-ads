@@ -2,46 +2,53 @@
 
 A structured, multi-phase Google Ads demand generation system for Cal Preserving, a Bay Area exterior wood preservation and restoration company.
 
-## Overview
+## Documentation
 
-This repository contains the complete documentation, campaign architecture, and implementation specs for a phased Google Ads rollout:
-
-- **Phase 1:** Bay Area only, residential-focused campaigns
-- **Phase 2:** Bay Area + Fringe geographies
-- **Phase 3:** Full Residential vs Commercial persona split
+**All documentation is in the wiki:** [cp-google-ads Wiki](https://github.com/intragoinc/cp-google-ads/wiki)
 
 ## Quick Links
 
-| Document | Description |
+| Resource | Description |
 |----------|-------------|
-| [Project Summary](./project-summary.md) | High-level overview of the initiative |
-| [Project Plan](./project-plan.md) | Implementation plan with time estimates |
-| [Docs Table of Contents](./docs/README.mdx) | Full documentation index |
+| [Wiki Home](https://github.com/intragoinc/cp-google-ads/wiki) | Full documentation index |
+| [Phase 0.5 Launch Guide](https://github.com/intragoinc/cp-google-ads/wiki/Campaign-Master-Phase-0.5) | Current launch configuration |
+| [Project Summary](./project-summary.md) | High-level overview |
+| [Project Plan](./project-plan.md) | Implementation plan with GitHub issues |
 
-## Services Covered
+## Phases
 
-- Deck restoration and refinishing
-- Wood siding restoration
-- Wood structures (fences, arbors, pergolas, gazebos)
-- Outdoor furniture (teak, IPE, hardwood)
-- Hardscape pressure washing
+- **Phase 0.5:** Simplified launch (1 ad group per campaign) — *Current*
+- **Phase 1:** Bay Area only, residential-focused campaigns
+- **Phase 2:** Bay Area + Fringe geographies
+- **Phase 3:** Full Residential vs Commercial persona split
 
 ## Repository Structure
 
 ```
 /
-├── docs/                    # All project documentation
-│   ├── 01_xx_*             # Context & orientation
-│   ├── 02_xx_*             # Segmentation, creative, landing pages
-│   ├── 03_xx_*             # Attribution, Salesforce, reporting, QA
-│   ├── 04_xx_*             # SEO alignment
-│   ├── campaign-master-*   # Campaign structure CSVs
-│   ├── lp-spec-*           # Landing page specifications
-│   ├── _archive/           # Superseded documents
-│   └── README.mdx          # Documentation table of contents
-├── project-summary.md       # Project overview
-└── project-plan.md          # Implementation plan with estimates
+├── docs/                           # Data files only
+│   ├── campaign-master-phase-*.csv # Campaign structure by phase
+│   ├── *-mapping.csv               # Field and URL mappings
+│   ├── *.json                      # Reporting specs
+│   ├── *.html                      # LP wireframes
+│   └── prompt-*.md                 # AI prompts
+├── project-summary.md              # Project overview
+└── project-plan.md                 # Implementation plan
 ```
+
+## Data Files
+
+| File | Description |
+|------|-------------|
+| [campaign-master-phase-0.5.csv](./docs/campaign-master-phase-0.5.csv) | Phase 0.5 campaigns (current) |
+| [campaign-master-phase-1.csv](./docs/campaign-master-phase-1.csv) | Phase 1 campaigns |
+| [campaign-master-phase-2.csv](./docs/campaign-master-phase-2.csv) | Phase 2 campaigns |
+| [campaign-master-phase-3.csv](./docs/campaign-master-phase-3.csv) | Phase 3 campaigns |
+| [campaign-ad-group-keywords-negatives.csv](./docs/campaign-ad-group-keywords-negatives.csv) | Keywords and negatives |
+| [03_01_sfdc-mapping.csv](./docs/03_01_sfdc-mapping.csv) | Salesforce field mapping |
+| [03_02_reporting-spec.json](./docs/03_02_reporting-spec.json) | Reporting specification |
+| [lp-url-mapping-phase-2.csv](./docs/lp-url-mapping-phase-2.csv) | LP URLs for Phase 2 |
+| [lp-url-mapping-phase-3.csv](./docs/lp-url-mapping-phase-3.csv) | LP URLs for Phase 3 |
 
 ## Team
 
@@ -51,25 +58,6 @@ This repository contains the complete documentation, campaign architecture, and 
 | Marketing | Google Ads campaigns, keywords, RSAs, optimization |
 | Web | Landing pages, forms, tracking |
 | Salesforce | Field mapping, UTM capture, reporting |
-
-## Key Documents
-
-### Strategy & Planning
-- [Initiative Overview](./docs/initiative-google-ads-phases-1-3.mdx)
-- [Executive Context](./docs/01_01_executive-context.mdx)
-- [RACI Matrix](./docs/03_05_raci-matrix.md)
-
-### Implementation
-- [Campaign Master - Phase 1](./docs/campaign-master-phase-1.csv)
-- [LP Spec](./docs/02_17_lp-spec.md)
-- [Web-PHP-SFDC Field Contract](./docs/03_04_web-php-sfdc-field-contract.md)
-
-### Quality & Launch
-- [QA Matrix](./docs/03_07_qa-matrix.md)
-- [Risks & Assumptions](./docs/03_06_risks-assumptions.md)
-
-### Maintenance
-- [Style Guide](./docs/STYLE-GUIDE.md)
 
 ## Related Repositories
 

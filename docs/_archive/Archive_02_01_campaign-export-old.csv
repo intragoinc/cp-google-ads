@@ -1,5 +1,0 @@
-campaign_name,geo,persona,service,bidding_strategy,daily_budget,network,lp_slug,notes
-GA_BA_DECK_RES_P3,Bay Area,Residential,Deck,Maximize conversions,60,Search,deck-residential-bay-area,"Core deck revenue driver"
-GA_BA_SIDING_RES_P3,Bay Area,Residential,Siding,Maximize conversions,40,Search,siding-residential-bay-area,"High-ticket siding"
-GA_BA_STRUCT_RES_P3,Bay Area,Residential,Structures,Maximize conversions,20,Search,exteriorwood-residential-bay-area,"Fence+Pergola+Furniture"
-GA_BA_CATCHALL_RES_P3,Bay Area,Residential,CatchAll,Maximize conversions,10,Search,exteriorwood-residential-bay-area,"Long-tail exterior wood"
